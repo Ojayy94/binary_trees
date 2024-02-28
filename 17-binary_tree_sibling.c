@@ -2,7 +2,9 @@
 
 /**
  * binary_tree_sibling - A function that that finds the sibling of a node
- * @node: A pointer to the sibling. Your function must return a pointer to the sibling node
+ * @node: A pointer to the sibling
+ *	  Your function must return a pointer to the sibling node
+ *	  If node has no sibling, return NULL
  * Return: If node is NULL or the parent is NULL, return NULL
  */
 
