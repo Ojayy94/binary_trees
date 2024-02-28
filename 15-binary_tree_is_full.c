@@ -6,24 +6,20 @@
  * Return: If tree is NULL, your function must return 0
  */
 
-int binary_tree_is_full(const binary_tree_t *tree);
+int binary_tree_is_full(const binary_tree_t *tree)
 {
-	int is_full = 1;
-
-	if (!tree)
+	if (tree == NULL)
 		return (0);
 
-	if (tree->left && !(tree->right))
-		return (0);
+	if (tree->left == NULL)
+		return (1);
 
-	if (tree->right && !(tree->left))
-		return (0);
+	if (tree->right == NULL)
+                return (1);
 
 	if (tree->left)
-		is_full *= binary_tree_is_full(tree->left);
+		return (binary_tree_is_full(tree->left));
 
 	if (tree->right)
-		is_full *= binary_tree_is_full(tree->right);
-
-	return (is_full);
+		return (binary_tree_is_full(tree->right));
 }
